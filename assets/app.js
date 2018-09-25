@@ -8,7 +8,7 @@ $(document).ready(function () {
     $("#display-images").empty(); 
     var input = $(this).attr("data-name");
     var limit = 10; 
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&limit=" + limit + "&api_key=WI5STGZoPmBIw0Zekn92Ld0ww54AQ0vB";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + user-input + "&api_key=WI5STGZoPmBIw0Zekn92Ld0ww54AQ0vB&limit=10";
 
     $.ajax({ 
         url: queryURL, 
@@ -16,6 +16,8 @@ $(document).ready(function () {
     }).done(function(response) { 
         for(var j= 0; j < limit; j++) { 
             var displayDiv = $("<div>"); 
+            displayDiv.addclass("holder");
+
             var image = $("<img>"); 
             image.attr("src", response.data[j].images.original_still.url); 
             image.attr("data-still", response.data[j].images.original_still.url); 
@@ -37,7 +39,7 @@ $(document).ready(function () {
 
    function renderButtons() {
         $("#display-buttons").empty();
-        for(i = 0; i < topics.length; i++){
+        for (i = 0; i < topics.length; i++){
             
             var newButton = $("<button>")
             newButton.attr("class", "btn btn-default"); 
@@ -78,6 +80,7 @@ $("#submitPress").on("click", function() {
 })
 
 })(jQuery);
-$(document).on("click", ".gif", stillUnstill);
+$(document).on("click", "#input", displayImg);
+$(document).on("click", ".gif", imageChangeState);
 
 });
