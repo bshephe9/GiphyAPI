@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Giphy API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css"/>
+</head>
+<body>
+ 
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Dog Gifs</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-8" id="display-buttons"></div>
+        </div>
+
+            <div class="col-sm-4">
+                <form id="form">
+                    <label for="user-input">Add a Dog</label><br> 
+                    <input type="text" id="user-input">
+                    <input id="submitPress" type="submit" value="Submit" class="btn btn-default">
+                </form>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-8"
+                 id="display-images">
+                </div>
+            </div>
+            
+    </div>
+    <script src="assets/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
